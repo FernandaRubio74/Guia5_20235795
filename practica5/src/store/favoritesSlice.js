@@ -1,6 +1,6 @@
 import React from 'react'
 
-const favoritesSlice = (set, get) => ({
+export const createFavoritesSlice = (set, get) => ({
     favorites: [],
 
     favoriteExists: (id) => {
@@ -30,4 +30,4 @@ const favoritesSlice = (set, get) => ({
         }
     }
 })
-export default favoritesSlice
+

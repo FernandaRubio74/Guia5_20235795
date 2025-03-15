@@ -1,10 +1,11 @@
-import { getCategories, getRecipeById, getRecipes } from "../services/RecipeService";
+ import { getCategories, getRecipeById, getRecipes } from "../services/RecipeService";
 
 export const createRecipeSlice = (set) => ({
     categories:[],
     drinks: [],
     selectedRecipe:{},
     modal:false,
+
     fetchCategories: async () => {
         const categories=await getCategories()
         set({categories})
@@ -22,8 +23,8 @@ export const createRecipeSlice = (set) => ({
     }, 
     closeModal:() =>{
         set({
-            modal:false,
-            selectRecipe:{}
+            modal: false,
+            selectedRecipe:{}
         })
     }
 })
